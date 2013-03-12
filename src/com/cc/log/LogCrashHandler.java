@@ -48,9 +48,12 @@ public class LogCrashHandler implements UncaughtExceptionHandler {
 	 * 初始化方法
 	 */
 	public void init(Context context) {
-		this.context = context;
-		defaultExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
-		Thread.setDefaultUncaughtExceptionHandler(this);
+		if (context != null) {
+			this.context = context;
+			defaultExceptionHandler = Thread
+					.getDefaultUncaughtExceptionHandler();
+			Thread.setDefaultUncaughtExceptionHandler(this);
+		}
 	}
 
 	@Override
