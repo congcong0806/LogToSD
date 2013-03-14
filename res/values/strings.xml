@@ -4,5 +4,6 @@
     <string name="app_name">LogToSD</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="btn_str">按钮</string>
 
 </resources>

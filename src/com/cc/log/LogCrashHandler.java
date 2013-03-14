@@ -86,6 +86,8 @@ public class LogCrashHandler implements UncaughtExceptionHandler {
 			PrintWriter printWriter = new PrintWriter(writer);
 			ex.printStackTrace(printWriter);
 			sb.append(writer.toString()).append("\n");// 写入错误信息
+			// 手动发送错误报告
+			// MobclickAgent.reportError(context, sb.toString());
 			// 创建文件夹及文件
 			File dir = new File(SDPATH);
 			if (!dir.exists() || !dir.isDirectory()) {
